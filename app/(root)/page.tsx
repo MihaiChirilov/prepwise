@@ -6,7 +6,7 @@ import InterviewCard from "@/components/InterviewCard";
 import { getCurrentUser } from "@/lib/actions/auth.action";
 import { getInterviewsByUserId, getLatestInterviews } from "@/lib/actions/general.actions";
 
-const Page = async () => {
+const Home = async () => {
     const user = await getCurrentUser();
     const [userInterviews, latestInterviews] = await Promise.all([
         await getInterviewsByUserId(user?.id!),
@@ -59,4 +59,4 @@ const Page = async () => {
     )
 }
 
-export default Page
+export default Home
