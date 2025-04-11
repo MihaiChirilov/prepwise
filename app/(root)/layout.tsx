@@ -4,6 +4,7 @@ import Image from "next/image";
 import {isAuthenticated, getCurrentUser} from "@/lib/actions/auth.action";
 import {redirect} from "next/navigation";
 import UserMenu from "@/components/UserMenu";
+import { Analytics } from "@vercel/analytics/react";
 
 const RootLayout = async ({children}: {children: ReactNode}) => {
     const isUserAuthenticated = await isAuthenticated();
@@ -26,6 +27,7 @@ const RootLayout = async ({children}: {children: ReactNode}) => {
             </nav>
 
             {children}
+            <Analytics />
         </div>
     )
 }
