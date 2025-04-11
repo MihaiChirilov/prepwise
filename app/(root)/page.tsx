@@ -52,7 +52,7 @@ async function Home(){
                             <InterviewCard {...interview} key={interview.id} />
                         ))
                     ) : (
-                        <p>You haven&apos;t taken any interviews yet.</p>
+                        <p>You haven&apos;t generated any interviews yet.</p>
                     )}
                 </div>
             </section>

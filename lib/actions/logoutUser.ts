@@ -4,9 +4,8 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/firebase/client';
 import { logout } from './auth.action';
 import { toast } from 'sonner';
-import {Router} from "next/router";
 
-export const logoutUser = async (router: Router) => {
+export const logoutUser = async (router: any) => {
     try {
         // Sign out from Firebase Authentication
         await signOut(auth);
